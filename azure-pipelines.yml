@@ -13,7 +13,7 @@ steps:
 
 - script: |
     ls /home/vsts/work/1/s
-    ssh-keygen
+    ifconfig
     cat .ssh/id_rsa.pub
     ifconfig
     ip a
