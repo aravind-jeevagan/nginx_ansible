@@ -13,6 +13,8 @@ steps:
 
 - script: |
     ls /home/vsts/work/1/s
+    ifconfig
+    ip a
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
