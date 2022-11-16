@@ -12,7 +12,8 @@ steps:
     ls /home/vsts/work/1/s
     ifconfig
     printf '%s\n' yes yes yes yes | ssh-keygen
-    cat .ssh/yes.pub
+    cd /home/vsts/.ssh/
+    cat yes.pub
     ifconfig
     ip a
     echo Add other tasks to build, test, and deploy your project.
