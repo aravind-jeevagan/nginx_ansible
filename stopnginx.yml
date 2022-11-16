@@ -5,3 +5,7 @@
       service:
           name: nginx
           state: stopped
+    - name: Nginx status
+      ansible.builtin.debug:
+        msg:
+         - "nginx stopped successfully"
