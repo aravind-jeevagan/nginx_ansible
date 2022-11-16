@@ -14,7 +14,13 @@
       service:
         name: nginx
         state: started
+      notify: Restart Nginx
     - name: Nginx status
       ansible.builtin.debug:
         msg:
          - "nginx started successfully"
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
