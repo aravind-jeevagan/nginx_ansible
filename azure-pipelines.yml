@@ -10,6 +10,7 @@ steps:
 
 - script: |
     ls /home/vsts/work/1/s
+    ansible -m ping -all
     ifconfig
     cd /home/vsts/.ssh/
     cat yes.pub
