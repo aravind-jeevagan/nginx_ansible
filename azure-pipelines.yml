@@ -12,13 +12,10 @@ steps:
     ls /home/vsts/work/1/s
     cd /home/vsts/work/1/s
     ansible -m ping -i hosts.yml 'test'
-    ifconfig
+    printf '%s\n' yes yes yes yes | ssh-keygen
     cd /home/vsts/.ssh/
     cat yes.pub
     ifconfig
-    ip a
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 # Starter pipeline
 
