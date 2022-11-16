@@ -1,6 +1,6 @@
 ---
 - name: Install nginix
-  hosts: test
+  hosts: all
   become: true
 
   tasks:
