@@ -5,17 +5,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
     ls /home/vsts/work/1/s
-    cd /home/vsts/.ssh/
-    cat yes.pub
-    cd /home/vsts/work/1/s
     ansible -m ping -i hosts.yml 'test'
-    ifconfig
-  displayName: 'Run a multi-line script'
+  displayName: 'Test Ansible conectivity'
 # Starter pipeline
 
 # Start with a minimal pipeline that you can customize to build and deploy your code.
