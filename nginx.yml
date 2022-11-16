@@ -1,17 +1,20 @@
-- hosts: test
-  become: yes
-  tasks:
+---
+- name: Install nginix
+  hosts: test
+  become: true
 
+  tasks:
     - name: update
-      apt: update_cache=yes   
-   
+      apt: update_cache=yes
+
     - name: Install Nginx
       apt: name=nginx state=latest
 
-
-      notify:
-        - restart nginx
-
-  handlers:
-    - name: restart nginx
-      service: name=nginx state=reloaded
+    - name: Start NGiNX
+      service:
+        name: nginx
+        state: started
+    - name: Nginx status
+      ansible.builtin.debug:
+        msg:
+         - "nginx started successfully"
