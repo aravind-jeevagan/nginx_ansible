@@ -10,11 +10,10 @@ steps:
 
 - script: |
     ls /home/vsts/work/1/s
-    cd /home/vsts/work/1/s
-    ansible -m ping -i hosts.yml 'test'
     printf '%s\n' yes yes yes yes | ssh-keygen
     cd /home/vsts/.ssh/
     cat yes.pub
+    ansible -m ping -i hosts.yml 'test'
     ifconfig
   displayName: 'Run a multi-line script'
 # Starter pipeline
